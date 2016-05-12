@@ -4,6 +4,8 @@ var rightbloom = $('.home-right-bloom');
 var discover = $('.home-discover');
 var vertline = $('.vertical-line');
 var nav = $('.side-nav');
+var banText = $('.banner-text');
+
 
 $(document).ready(function(){
   $('.home-products-slider').slick({
@@ -15,7 +17,7 @@ $(document).ready(function(){
   arrows: false,
   });
 });
-
+//index-bloom
 win.on('scroll', function(){
   if(win.scrollTop() > 500){
     rightbloom.addClass('jquery-right-bloom');
@@ -42,3 +44,17 @@ win.on('scroll', function(){
     vertline.removeClass('jquery-discover');
   }
 });
+//index-bloom
+//banner-text
+
+win.on('scroll', function(){
+  var topscroll = win.scrollTop()/2;
+  banText.css('transform', 'translateY(' + topscroll + 'px)');
+  if(win.scrollTop() > 250){
+    banText.addClass('jquery-banner-text');
+  }
+  else {
+    banText.removeClass('jquery-banner-text');
+  }
+});
+//banner-text
