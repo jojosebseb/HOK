@@ -5,6 +5,8 @@ var discover = $('.home-discover');
 var vertline = $('.vertical-line');
 var nav = $('.side-nav');
 var banText = $('.banner-text');
+var psli = $('.products-submenu-li');
+var smlogo = $('.sub-menu-logo-container');
 
 
 $(document).ready(function(){
@@ -17,6 +19,14 @@ $(document).ready(function(){
   arrows: false,
   });
 });
+//subnav
+var rotation = 0;
+psli.hover(function(){
+
+  rotation = rotation +30;
+  smlogo.css('transform', 'rotate(' + rotation + 'deg)');
+});
+//subnav
 //index-bloom
 win.on('scroll', function(){
   if(win.scrollTop() > 500){
@@ -46,7 +56,6 @@ win.on('scroll', function(){
 });
 //index-bloom
 //banner-text
-
 win.on('scroll', function(){
   var topscroll = win.scrollTop()/2;
   banText.css('transform', 'translateY(' + topscroll + 'px)');

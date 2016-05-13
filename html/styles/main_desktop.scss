@@ -14,6 +14,10 @@ a{
     src: url("../font/GenBasBI.ttf");
 }
 @font-face {
+    font-family: GenbasB;
+    src: url("../font/GenBasB.ttf");
+}
+@font-face {
     font-family: LatoReg;
     src: url("../font/Lato-Regular.ttf");
 }
@@ -46,11 +50,11 @@ $sidebar-width: 200px;
   transition: all .3s ease;
   cursor: pointer;
   border-radius: 3px;
+  outline: none;
 }
 .button:hover{
   @extend .whiteonblk;
   background-color: darken($bgwhite, 80%);
-
 }
 // init-vars
 //side-nav
@@ -89,7 +93,7 @@ $sidebar-width: 200px;
   bottom: 50px;
   width: 100%;
   ul{
-
+    padding-left: 10px;
     text-align: left;
   }
   li{
@@ -109,25 +113,58 @@ $sidebar-width: 200px;
 //side-nav
 //sub-menu
 .sub-menu{
-  @extend .whiteonblk;
+  color: white;
+  background-color: rgba(0, 0, 0, 1);
   width: 200px;
   height: 100vh;
-  left: 0px;
+  left: 150px;
   top: 0px;
   position: fixed;
-  z-index: -1;
+  z-index: 5;
   opacity: 0;
-  transition: all .3s ease;
-  transition-delay: .1s;
+  transition: all .3s cubic-bezier(0.65, 0.76, 0.62, 1.23);
+  cursor: default;
 }
 .sub-menu:hover{
   left: 200px;
   opacity: 1;
+  z-index: -1;
 }
 .has-submenu:hover +.sub-menu{
   left: 200px;
   opacity: 1;
 }
+.sub-menu-logo-container{
+  height: 45px;
+  width: 45px;
+  margin: 100px auto 40px;
+  background-image: url(../img/icon/submenu-logo-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 1s cubic-bezier(0, 1.02, 0.29, 1.23)
+}
+.sub-menu-header{
+  width: 45px;
+  margin: 10px auto 100px;
+}
+.products-submenu{
+  margin: 10px auto;
+  width: 100px;
+  text-align: center;
+  li{
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    margin: 10px 0px;
+    color: grey;
+    cursor: pointer;
+  }
+  li:hover{
+    color: white;
+    border-bottom: 1px solid black;
+  }
+}
+
 //sub-menu
 .home-banner{
   background-color: black;
@@ -467,7 +504,6 @@ $sidebar-width: 200px;
     letter-spacing: 3px;
     cursor: pointer;
     transition: all .3s ease;
-
   }
   .product-tabs-highlighted{
     @extend .blkonwhite;
@@ -529,6 +565,116 @@ $sidebar-width: 200px;
   width: 100%;
 }
 //product-page
+//contact
+.contact-banner{
+  @extend .home-banner;
+  background-image: url("../img/contact/contact-gmaps.png");
+}
+.contact-content {
+  @extend .home-content;
+  margin: 50px auto;
+}
+.contact-message{
+  @extend .home-message;
+  text-align: center;
+  .contact-message-lv2{
+    font-size: 12px;
+    font-style: normal;
+    color: grey;
+    letter-spacing: 1.5px;
+  }
+}
+.contact-left-right-container{
+  margin-top: 100px;
+}
+.contact-left-right-container::after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.contact-inputs-left{
+  width: 50%;
+  float: left;
+  padding: 5px;
+}
+.input-titles{
+  font-family: Genbas;
+  margin: 15px 0px;
+  color: #333;
+}
+.full-inputs{
+  display: block;
+  width: 320px;
+  margin: 10px 0px;
+  height: 35px;
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
+  outline: none;
+  padding: 10px 10px 0px 10px;
+  max-width: 320px;
+  max-height: 35px;
+  resize: none;
+}
+.tall-inputs{
+  @extend .full-inputs;
+  height: 270px;
+  max-height: 270px;
+}
+.contact-button{
+  @extend .button;
+  @extend .whiteonblk;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  float: right;
+}
+.contact-informations-div-right{
+  width: 50%;
+  float: right;
+  padding: 5px;
+}
+.contact-info-module{
+  width: 200px;
+  margin: 30px auto;
+}
+.contact-info-title{
+  font-family: GenbasB;
+  padding-bottom: 15px;
+  letter-spacing: 1px;
+}
+.contact-info-title:after{
+  content: "";
+  height: 10px;
+  display: block;
+  width: 50px;
+  border-bottom: 2px solid black;
+}
+.contact-info-desc{
+  font-family: Genbas;
+  color: #222;
+  font-size: 14px;
+  line-height: 23px;
+}
+.contact-sosmed{
+
+  img{
+    padding-right: 10px;
+    margin: auto;
+  }
+  li{
+    padding: 5px;
+  }
+  span{
+    float: right;
+    padding-right: 40px;
+  }
+
+}
+//contact
 //jquery
 .jquery-banner-text{
   opacity: 0;
