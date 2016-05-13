@@ -63,7 +63,7 @@ $sidebar-width: 200px;
   width: $sidebar-width;
   background-color: $bgwhite;
   position: fixed;
-  z-index: 99;
+  z-index: 1;
   text-align: center;
   padding: 50px 0px 0px 0px;
   transition: all 1s ease;
@@ -122,13 +122,12 @@ $sidebar-width: 200px;
   position: fixed;
   z-index: 5;
   opacity: 0;
-  transition: all .3s cubic-bezier(0.65, 0.76, 0.62, 1.23);
   cursor: default;
 }
 .sub-menu:hover{
   left: 200px;
   opacity: 1;
-  z-index: -1;
+  z-index: 1;
 }
 .has-submenu:hover +.sub-menu{
   left: 200px;
@@ -199,7 +198,7 @@ $sidebar-width: 200px;
   font-size: 10px;
   padding-top: 10px;
   opacity: 0.5;
-  transition: all .2s ease;
+  transition: all .3s ease;
   cursor: pointer;
   .down-arrow{
     line-height: 5px;

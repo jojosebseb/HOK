@@ -7,6 +7,7 @@ var nav = $('.side-nav');
 var banText = $('.banner-text');
 var psli = $('.products-submenu-li');
 var smlogo = $('.sub-menu-logo-container');
+var toTopBtn = $('.back-to-top');
 
 
 $(document).ready(function(){
@@ -19,6 +20,27 @@ $(document).ready(function(){
   arrows: false,
   });
 });
+if ($('.back-to-top').length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('.back-to-top').addClass('show');
+            } else {
+                $('.back-to-top').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('.back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+}
 //subnav
 var rotation = 0;
 psli.hover(function(){
