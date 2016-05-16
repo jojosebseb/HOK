@@ -8,6 +8,11 @@ var banText = $('.banner-text');
 var psli = $('.products-submenu-li');
 var smlogo = $('.sub-menu-logo-container');
 var toTopBtn = $('.back-to-top');
+var mobileHandle = $('.mobile-handle');
+var sideNav = $('.side-nav');
+var mobileNav = $('.mobile-navbar');
+var mobileClose = $('.mobile-close-handle');
+var mobileNavLogo = $('.mobile-navbar-logo ');
 
 
 $(document).ready(function(){
@@ -89,3 +94,23 @@ win.on('scroll', function(){
   }
 });
 //banner-text
+
+//mobile-handle
+mobileHandle.on('click', function(){
+  sideNav.toggleClass('jquery-side-nav');
+  mobileHandle.toggleClass('jquery-mobile-handle');
+});
+mobileClose.on('click', function(){
+  sideNav.toggleClass('jquery-side-nav');
+  mobileHandle.toggleClass('jquery-mobile-handle');
+});
+win.on('scroll', function(){
+  if(win.scrollTop() > 80){
+    mobileNavLogo.addClass('jquery-mobile-nav-logo');
+    mobileNav.addClass('jquery-mobile-nav-scroll');
+  }
+  else {
+    mobileNav.removeClass('jquery-mobile-nav-scroll');
+    mobileNavLogo.removeClass('jquery-mobile-nav-logo');
+  }
+});
