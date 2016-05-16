@@ -184,7 +184,7 @@ $sidebar-width: 150px;
   width: 100vw;
   position: fixed;
   z-index: 1;
-  transition: all .3s ease;
+  transition: all .1s ease-in;
 }
 .mobile-navbar-logo{
   height: 100%;
@@ -197,7 +197,7 @@ $sidebar-width: 150px;
   position: absolute;
   background-image: url(../img/icon/hok-main-logo.png);
   background-size: contain;
-  transition: all .3s ease;
+  transition: all .1s ease-in;
 }
 .mobile-handle{
   width: 35px;
