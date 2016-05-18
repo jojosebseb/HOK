@@ -13,7 +13,16 @@ var sideNav = $('.side-nav');
 var mobileNav = $('.mobile-navbar');
 var mobileClose = $('.mobile-close-handle');
 var mobileNavLogo = $('.mobile-navbar-logo ');
+var subNav = $('.sub-menu');
+var subNavHandle =$('.has-submenu');
 
+subNav.hide();
+subNavHandle.on('click', function(){
+  var effect = 'slide';
+  var options = { direction: 'right' };
+  var duration = 500;
+  subNav.animate({width: 'toggle'}, 300);
+})
 
 $(document).ready(function(){
   $('.home-products-slider').slick({
@@ -103,6 +112,7 @@ mobileHandle.on('click', function(){
 mobileClose.on('click', function(){
   sideNav.toggleClass('jquery-side-nav');
   mobileHandle.toggleClass('jquery-mobile-handle');
+  subNav.animate({width: 'remove'}, 300);
 });
 win.on('scroll', function(){
   if(win.scrollTop() > 80){
@@ -114,3 +124,9 @@ win.on('scroll', function(){
     mobileNavLogo.removeClass('jquery-mobile-nav-logo');
   }
 });
+
+sideNav.on("swipeleft", function(){
+  sideNav.toggleClass('jquery-side-nav');
+  mobileHandle.toggleClass('jquery-mobile-handle');
+  console.log("asd");
+})

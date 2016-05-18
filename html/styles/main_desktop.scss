@@ -120,21 +120,12 @@ $sidebar-width: 200px;
   background-color: rgba(0, 0, 0, 1);
   width: 200px;
   height: 100vh;
-  left: 150px;
+  left: 200px;
   top: 0px;
   position: fixed;
-  z-index: 5;
-  opacity: 0;
+  z-index: -5;
+  opacity: 1;
   cursor: default;
-}
-.sub-menu:hover{
-  left: 200px;
-  opacity: 1;
-  z-index: 1;
-}
-.has-submenu:hover +.sub-menu{
-  left: 200px;
-  opacity: 1;
 }
 .sub-menu-logo-container{
   height: 45px;
@@ -149,6 +140,11 @@ $sidebar-width: 200px;
 .sub-menu-header{
   width: 45px;
   margin: 10px auto 100px;
+}
+.has-submenu::after{
+  content: ">";
+  font-family: Latoreg;
+  padding-left: 20px;
 }
 .products-submenu{
   margin: 10px auto;
@@ -698,5 +694,9 @@ $sidebar-width: 200px;
 .jquery-discover{
   opacity: 1;
   top: 0px;
+}
+.jquery-subnav{
+  width: 200px;
+  opacity: 1;
 }
 //jquery
