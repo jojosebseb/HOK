@@ -34,6 +34,17 @@ $(document).ready(function(){
   arrows: false,
   });
 });
+
+$('.back-to-top').hide();
+win.on('scroll', function(){
+  if(win.scrollTop() > 600){
+    $('.back-to-top').show();
+  }
+  else {
+    $('.back-to-top').hide();
+  }
+});
+
 if ($('.back-to-top').length) {
     var scrollTrigger = 100, // px
         backToTop = function () {
