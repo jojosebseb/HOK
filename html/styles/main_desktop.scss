@@ -5,6 +5,7 @@
   font-size: 1em;
   list-style: none;
   text-decoration: none;
+  font-family: times;
 }
 a{
   color: inherit;
@@ -672,9 +673,22 @@ $sidebar-width: 200px;
   }
 
 }
-.nav-menu li a {display: block;}
-#menu-item-18 a::after{content:">";font-family:Latoreg;padding-left:20px}
-.products-submenu li a {display: block;}
+.nav-menu li a {
+  display: block;
+}
+#menu-item-18 a::after{
+  content:">";
+  font-family:Latoreg;
+  padding-left:20px;
+  opacity: 0.3;
+  transition: all .3s ease;
+}
+#menu-item-18:hover:after{
+  opacity: 1;
+}
+.products-submenu li a {
+  display: block;
+}
 //contact
 
 //sidebar
@@ -687,8 +701,8 @@ $sidebar-width: 200px;
 }
 .wp_submenu_li_image {
   img{
-    height: 90px;
-    width: 90px;
+    height: 70px;
+    width: 70px;
   }
 }
 .wp_submenu_li_image {
