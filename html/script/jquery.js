@@ -145,7 +145,3 @@ sideNav.on("swipeleft", function(){
   mobileHandle.toggleClass('jquery-mobile-handle');
   console.log("asd");
 })
-
-liText.on("click", function(){
-  liText.prev().slideToggle();
-})

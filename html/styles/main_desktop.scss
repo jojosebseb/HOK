@@ -681,6 +681,9 @@ $sidebar-width: 200px;
 .wp_submenu_li_image {
   display: none;
 }
+.wp_submenu_li_text:hover > .wp_submenu_li_image{
+  display: block;
+}
 
 //sidebar
 //jquery
@@ -710,3 +713,13 @@ $sidebar-width: 200px;
   opacity: 1;
 }
 //jquery
+
+
+@media screen and (min-width: 1080px)  and (max-width: 1500px){
+  .centeredmargin{
+    margin: 0px auto 0px 23%;
+  }
+  .content-container{
+    width: 850px;
+  }
+}
