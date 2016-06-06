@@ -14,10 +14,12 @@ var mobileNav = $('.mobile-navbar');
 var mobileClose = $('.mobile-close-handle');
 var mobileNavLogo = $('.mobile-navbar-logo ');
 var subNav = $('.sub-menu');
-var subNavHandle =$('.has-submenu');
+//var subNavHandle =$('.has-submenu');
+var subNavHandle =$('#menu-item-18');
 
 subNav.hide();
-subNavHandle.on('click', function(){
+subNavHandle.on('click', function(e){
+  e.preventDefault();
   var effect = 'slide';
   var options = { direction: 'right' };
   var duration = 500;
