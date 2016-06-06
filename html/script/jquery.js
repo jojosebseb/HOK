@@ -14,6 +14,8 @@ var mobileNav = $('.mobile-navbar');
 var mobileClose = $('.mobile-close-handle');
 var mobileNavLogo = $('.mobile-navbar-logo ');
 var subNav = $('.sub-menu');
+var liText = $('.wp_submenu_li_text');
+var liImg = $('.wp_submenu_li_image')
 //var subNavHandle =$('.has-submenu');
 var subNavHandle =$('#menu-item-18');
 
@@ -142,4 +144,8 @@ sideNav.on("swipeleft", function(){
   sideNav.toggleClass('jquery-side-nav');
   mobileHandle.toggleClass('jquery-mobile-handle');
   console.log("asd");
+})
+
+liText.on("click", function(){
+  liText.prev().slideToggle();
 })

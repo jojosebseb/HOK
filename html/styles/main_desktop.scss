@@ -147,7 +147,7 @@ $sidebar-width: 200px;
   padding-left: 20px;
 }
 .products-submenu{
-  margin: 10px auto;
+  margin: 20vh auto;
   width: 100px;
   text-align: center;
   li{
@@ -676,6 +676,13 @@ $sidebar-width: 200px;
 #menu-item-18 a::after{content:">";font-family:Latoreg;padding-left:20px}
 .products-submenu li a {display: block;}
 //contact
+
+//sidebar
+.wp_submenu_li_image {
+  display: none;
+}
+
+//sidebar
 //jquery
 .jquery-banner-text{
   opacity: 0;
