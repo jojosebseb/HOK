@@ -252,6 +252,10 @@ $sidebar-width: 200px;
   font-family: LatoReg;
   color: $fontblk;
 }
+.home-paragraph p{
+  font-family: inherit;
+  color: inherit;
+}
 .home-discover{
   font-family: Genbas;
   font-size: 30px;
