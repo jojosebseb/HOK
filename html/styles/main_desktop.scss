@@ -612,7 +612,7 @@ $sidebar-width: 200px;
   border-right: 2px solid #111;
   border-bottom: 2px solid #111;
   outline: none;
-  padding: 10px 10px 0px 10px;
+  padding: 5px 10px 0px 10px;
   max-width: 320px;
   max-height: 35px;
   resize: none;
@@ -740,7 +740,6 @@ $sidebar-width: 200px;
   opacity: 1;
 }
 //jquery
-
 
 @media screen and (min-width: 1080px)  and (max-width: 1500px){
   .centeredmargin{
