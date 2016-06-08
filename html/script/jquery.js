@@ -36,6 +36,19 @@ $(document).ready(function(){
   centerMode: true,
   variableWidth: true,
   arrows: false,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        arrows: true,
+      }
+    },
+  ]
   });
 });
 

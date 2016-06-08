@@ -7,6 +7,9 @@
   text-decoration: none;
   font-family: "Times New Roman", Times, serif;
 }
+p{
+  font-family: inherit !important;
+}
 a{
   color: inherit;
 }
@@ -740,6 +743,30 @@ $sidebar-width: 200px;
   opacity: 1;
 }
 //jquery
+//slick
+.slick-dots{
+  text-align: center;
+  li{
+    display: inline-block;
+    margin: 20px 10px;
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    transition: all .3s ease;
+    button{
+      display: none;
+    }
+  }
+  li:hover{
+    background-color: rgba(0, 0, 0, 0.56);
+  }
+  .slick-active{
+    background-color: black;
+  }
+}
 
 @media screen and (min-width: 1080px)  and (max-width: 1500px){
   .centeredmargin{

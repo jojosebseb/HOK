@@ -793,6 +793,31 @@ $sidebar-width: 150px;
   width: 50px;
   padding: 5px;
 }
+.slick-arrow{
+  height: 20px;
+  width: 20px;
+  border: none;
+  color: transparent;
+  position: absolute;
+  top: 200px;
+  opacity: 0.8;
+  z-index: 99;
+  outline: none;
+  background-color: transparent;
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+}
+.slick-arrow:hover{
+  opacity: 0.9;
+}
+.slick-prev{
+  left: 20px;
+  transform: rotate(-135deg);
+}
+.slick-next{
+  right: 20px;
+  transform: rotate(45deg);
+}
 //jquery
 @media screen and (min-width: 900px) {
   .product-tabs{
