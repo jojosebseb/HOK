@@ -678,7 +678,6 @@ $sidebar-width: 200px;
     padding: 5px;
   }
   span{
-    padding-right: 40px;
     vertical-align: top;
     font-family: Genbas;
   }
@@ -781,6 +780,14 @@ $sidebar-width: 200px;
 .page-numbers{
   margin: 5px 10px;
   font-family: Latoreg;
+  opacity: 0.8;
+}
+.page-numbers:hover{
+  opacity: 1;
+}
+.current{
+  text-decoration: underline;
+  opacity: 1;
 }
 @media screen and (min-width: 1080px)  and (max-width: 1500px){
   .centeredmargin{
