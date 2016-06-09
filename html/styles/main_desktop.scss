@@ -9,6 +9,7 @@
 }
 p{
   font-family: inherit !important;
+  margin-bottom: 20px;
 }
 a{
   color: inherit;
@@ -254,6 +255,7 @@ $sidebar-width: 200px;
   font-family: LatoReg;
   color: $fontblk;
   z-index: 100;
+  position: relative;
 }
 .home-discover{
   font-family: Genbas;
@@ -473,7 +475,7 @@ $sidebar-width: 200px;
 }
 .news-title{
   @extend .home-message;
-  font-size: 25px;
+  font-size: 18px;
 }
 .news-date{
   @extend .banner-text-paragraph;
@@ -489,6 +491,7 @@ $sidebar-width: 200px;
 }
 .news-wrapper{
   position: absolute;
+  width: 100%;
   top: 50%;
   transform: translateY(-50%);
 }
