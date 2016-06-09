@@ -152,7 +152,6 @@ $sidebar-width: 200px;
 }
 .products-submenu{
   margin: 30vh auto;
-  width: 100px;
   text-align: center;
   li{
     text-decoration: none;
@@ -254,6 +253,7 @@ $sidebar-width: 200px;
   margin-top: 50px;
   font-family: LatoReg;
   color: $fontblk;
+  z-index: 100;
 }
 .home-discover{
   font-family: Genbas;
@@ -411,6 +411,7 @@ $sidebar-width: 200px;
   letter-spacing: 1px;
 }
 .news-panel-list{
+  text-align: center;
 }
 .news-panel-list:after {
    content: "";
@@ -449,22 +450,18 @@ $sidebar-width: 200px;
   @extend .news-panel;
   width: 300px;
   height: 420px;
-  float: left;
-  clear: both;
   background-color: rgb(88, 161, 214);
 }
 .onexone{
   @extend .news-panel;
   width: 300px;
   height: 200px;
-  float: left;
   background-color: rgb(124, 25, 126);
 }
 .twoxtwo{
   @extend .news-panel;
   width: 620px;
   height: 300px;
-  float: left;
   background-color: rgb(88, 179, 46);
 }
 //newspage
@@ -472,9 +469,11 @@ $sidebar-width: 200px;
 .news-content{
   height: 100%;
   @extend .home-content;
+  width: 80%;
 }
 .news-title{
   @extend .home-message;
+  font-size: 25px;
 }
 .news-date{
   @extend .banner-text-paragraph;
@@ -487,6 +486,11 @@ $sidebar-width: 200px;
   img{
     width: 660px;
   }
+}
+.news-wrapper{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 //news-detail-page
 //product-page
@@ -768,7 +772,13 @@ $sidebar-width: 200px;
     background-color: black;
   }
 }
+.pagination{
 
+}
+.page-numbers{
+  margin: 5px 10px;
+  font-family: Latoreg;
+}
 @media screen and (min-width: 1080px)  and (max-width: 1500px){
   .centeredmargin{
     margin: 0px auto 0px 23%;
