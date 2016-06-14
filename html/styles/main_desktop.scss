@@ -531,6 +531,7 @@ $sidebar-width: 200px;
   display: inline-block;
   position: relative;
   text-align: center;
+  vertical-align: top;
 }
 .product-adapter-title{
   border-bottom: 1px solid black;
@@ -546,9 +547,18 @@ $sidebar-width: 200px;
   font-size: 14px;
   letter-spacing: 1px;
 }
+.product-adapter-image{
+  position: relative;
+  width: 250px;
+  height: 100%;
+}
 .product-adapter-img{
   width: 235px;
   background-color: #333;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .product-hover-tint{
   opacity: 0;
