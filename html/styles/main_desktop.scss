@@ -487,6 +487,7 @@ $sidebar-width: 200px;
 .news-paragraph{
   @extend .home-paragraph;
   img{
+    max-width: 100%;
   }
 }
 .news-wrapper{
