@@ -161,13 +161,20 @@ $sidebar-width: 150px;
   font-size: 13px;
 }
 .products-submenu{
-  margin: 10px auto;
+  margin: 150px auto;
   width: 100px;
   text-align: center;
+  .wp_submenu_li_image.floatLeft {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+  }
   li{
     text-decoration: none;
     border-bottom: 1px solid black;
-    margin: 10px 0px;
+    margin: 20px 0px;
     color: grey;
     cursor: pointer;
   }
@@ -175,7 +182,11 @@ $sidebar-width: 150px;
     color: white;
     border-bottom: 1px solid black;
   }
+  li:hover > .wp_submenu_li_image.floatLeft{
+    opacity: 1;
+  }
 }
+
 //mobile-navbar
 .mobile-navbar{
   height: 100px;
@@ -552,6 +563,7 @@ $sidebar-width: 150px;
   img{
     display: block;
     margin: 10px auto;
+    max-width: 100%;
   }
 }
 //news-detail-page
@@ -583,12 +595,16 @@ $sidebar-width: 150px;
 }
 .product-adapter{
   width: 280px;
-  height: 400px;
   border: 1px solid grey;
   margin: 20px auto;
   display: block;
   position: relative;
 }
+.product-adapter-image {
+    background-size: cover;
+}
+
+
 .product-adapter-title{
   border-bottom: 1px solid black;
   padding: 10px 15px;

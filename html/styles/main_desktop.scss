@@ -363,8 +363,8 @@ $sidebar-width: 200px;
     width: 900px;
     .about-section-left{
       background-color: white;
-      width: 50%;
-      float: left;
+      width: 49%;
+      display: inline-block;
       .about-content-left{
         background-image: url("../img/about/about-content-2.jpg");
         background-repeat: no-repeat;
@@ -373,19 +373,22 @@ $sidebar-width: 200px;
       }
       .about-message-left{
         @extend .home-message;
-        width: 150px;
+        width: 90%;
+        float: right;
         text-align: left;
       }
       .about-paragraph-left{
         @extend .home-paragraph;
         margin-top: 20px;
-        width: 400px;
+        width: 90%;
+        float: right;
       }
     }
     .about-section-right{
       background-color: white;
       width: 50%;
-      float: right;
+      display: inline-block;
+      vertical-align: top;
       .about-message-right{
         @extend .home-message;
         width: 150px;
@@ -394,12 +397,15 @@ $sidebar-width: 200px;
       .about-paragraph-right{
         @extend .home-paragraph;
         margin-top: 20px;
+        width: 90%;
       }
       .about-content-right{
         background-image: url("../img/about/about-content-3.jpg");
         background-repeat: no-repeat;
         height: 700px;
         margin-top: 130px;
+        float: right;
+        width: 430px;
       }
     }
   }
@@ -801,7 +807,10 @@ $sidebar-width: 200px;
   text-decoration: underline;
   opacity: 1;
 }
-.product-content-tab{
+.nav-logo img{
+  height: 6vw;
+}
+.product-content-tab, .product-content{
   text-align: center;
 }
 .popup-link{
@@ -827,6 +836,7 @@ $sidebar-width: 200px;
       margin: 100px auto;
       height: 1300px;
       width: 850px;
+      padding: 30px;
   }
   .banner-text {
       margin: 0px auto 0px 43%;
@@ -864,4 +874,11 @@ $sidebar-width: 200px;
       position: relative;
       text-align: center;
   }
+}
+#menu-item-18 a::after {
+    content: "\0203A";
+    padding-left: 20px;
+    opacity: 0.5;
+    transition: all .3s ease;
+    font-size: 22px;
 }
